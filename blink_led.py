@@ -3,10 +3,10 @@ import time     # Use time library
 
 GPIO.setwarnings(False)
 
-ledPin1 = 11    # Set pin 11 as led anode output pin
-ledPin2 = 13    # Set pin 13 as another led anode output pin
+ledPin1 = 11    # Set pin 11 as led anode output pin while other pin is connected to one of the ground pin
+ledPin2 = 13    # Set pin 13 as another led anode output pin while other pin is connected to one of the ground pin
 
-GPIO.setmode(GPIO.BOARD)    # Nubers GPIOs by physical location
+GPIO.setmode(GPIO.BOARD)    # Numbers GPIOs by physical location
 GPIO.setup(ledPin1, GPIO.OUT)
 GPIO.output(ledPin1, GPIO.HIGH)
 
@@ -24,4 +24,5 @@ while True:   # set condition
     time.sleep(0.5)
 
 GPIO.cleanup();   #Clean up when exiting the program
+
 
